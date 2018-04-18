@@ -49,7 +49,7 @@ const (
 	ClusterStateFlagNew      = "new"
 	ClusterStateFlagExisting = "existing"
 
-	DefaultName                  = "default"
+	DefaultName                  = "lunan"
 	DefaultMaxSnapshots          = 5
 	DefaultMaxWALs               = 5
 	DefaultMaxTxnOps             = uint(128)
@@ -331,7 +331,7 @@ func NewConfig() *Config {
 		logger:       nil,
 		Logger:       "capnslog",
 		LogOutput:    []string{DefaultLogOutput},
-		Debug:        false,
+		Debug:        true,
 		LogPkgLevels: "",
 	}
 	cfg.InitialCluster = cfg.InitialClusterFromName(cfg.Name)
